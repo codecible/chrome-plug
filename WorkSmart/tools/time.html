@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间工具 - WorkSmart</title>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/time.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>WorkSmart</h2>
+            </div>
+            <div class="sidebar-menu">
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="time.html" class="menu-item active">
+                    <i class="fas fa-clock"></i>
+                    <span>时间工具</span>
+                </a>
+                <a href="encoding.html" class="menu-item">
+                    <i class="fas fa-code"></i>
+                    <span>编码工具</span>
+                </a>
+                <a href="../options.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>设置</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>时间工具</h2>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="timestamp">Unix时间戳转换</div>
+            </div>
+
+            <div class="tab-content active" id="timestamp-content">
+                <div class="two-columns">
+                    <div>
+                        <div class="form-group">
+                            <label>Unix时间戳</label>
+                            <input type="number" id="timestamp-input" placeholder="输入Unix时间戳，例如：1646300400">
+                        </div>
+                        <button class="button" id="timestamp-to-date-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            转换为日期时间
+                        </button>
+                        <div class="result-container" id="timestamp-result">
+                            <div class="result-title">转换结果</div>
+                            <div id="timestamp-result-utc"></div>
+                            <div id="timestamp-result-local"></div>
+                            <button class="copy-button" data-result="timestamp-result">
+                                <i class="fas fa-copy"></i>
+                                复制结果
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-group">
+                            <label>日期时间</label>
+                            <input type="text" id="date-input" placeholder="YYYY-MM-DD HH:MM:SS">
+                        </div>
+                        <div class="form-group">
+                            <label>时区</label>
+                            <select id="timezone-select">
+                                <option value="UTC">UTC</option>
+                                <option value="Asia/Shanghai" selected>Asia/Shanghai (GMT+8)</option>
+                                <option value="America/New_York">America/New_York (GMT-5)</option>
+                                <option value="Europe/London">Europe/London (GMT+0)</option>
+                            </select>
+                        </div>
+                        <button class="button" id="date-to-timestamp-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            转换为时间戳
+                        </button>
+                        <div class="result-container" id="date-result">
+                            <div class="result-title">转换结果</div>
+                            <div id="date-result-timestamp"></div>
+                            <button class="copy-button" data-result="date-result-timestamp">
+                                <i class="fas fa-copy"></i>
+                                复制结果
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/time.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSmart - 提高工作效率的多功能工具集</title>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>WorkSmart</h2>
+            </div>
+            <div class="sidebar-menu">
+                <a href="index.html" class="menu-item active">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="tools/time.html" class="menu-item">
+                    <i class="fas fa-clock"></i>
+                    <span>时间工具</span>
+                </a>
+                <a href="tools/encoding.html" class="menu-item">
+                    <i class="fas fa-code"></i>
+                    <span>编码工具</span>
+                </a>
+                <a href="options.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>设置</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>欢迎使用 WorkSmart</h2>
+            <p class="welcome-text">选择一个工具开始提高您的工作效率</p>
+
+            <div class="tool-grid">
+                <div class="tool-card" data-tool="time">
+                    <div class="tool-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="tool-title">Unix时间戳转换</div>
+                    <div class="tool-description">在时间戳和可读时间格式之间转换</div>
+                </div>
+                <div class="tool-card" data-tool="url">
+                    <div class="tool-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="tool-title">URL编码/解码</div>
+                    <div class="tool-description">快速处理URL中的特殊字符</div>
+                </div>
+                <div class="tool-card" data-tool="base64">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <div class="tool-title">Base64编码/解码</div>
+                    <div class="tool-description">文本和图片的Base64转换</div>
+                </div>
+                <div class="tool-card" data-tool="json">
+                    <div class="tool-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="tool-title">JSON格式化</div>
+                    <div class="tool-description">美化和验证JSON数据</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

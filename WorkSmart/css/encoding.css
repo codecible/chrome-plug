@@ -1,0 +1,21 @@
+/* 编码工具特定样式 */
+#url-result,
+#base64-result,
+#json-result {
+    word-break: break-all;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: monospace;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+input[type="file"] {
+    padding: 10px 0;
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "便签管理",
+  "version": "1.0",
+  "description": "一个简洁的便签管理工具。--来自KD",
+  "icons": {
+    "16": "icons/tag.png",
+    "32": "icons/tag.png",
+    "48": "icons/tag.png",
+    "128": "icons/tag.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/tag.png",
+      "32": "icons/tag.png",
+      "48": "icons/tag.png",
+      "128": "icons/tag.png"
+    }
+  },
+  "permissions": ["storage"]
+} 

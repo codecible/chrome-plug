@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编码工具 - WorkSmart</title>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/encoding.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>WorkSmart</h2>
+            </div>
+            <div class="sidebar-menu">
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="time.html" class="menu-item">
+                    <i class="fas fa-clock"></i>
+                    <span>时间工具</span>
+                </a>
+                <a href="encoding.html" class="menu-item active">
+                    <i class="fas fa-code"></i>
+                    <span>编码工具</span>
+                </a>
+                <a href="../options.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>设置</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>编码工具</h2>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="url">URL编码/解码</div>
+                <div class="tab" data-tab="base64">Base64编码/解码</div>
+                <div class="tab" data-tab="json">JSON格式化</div>
+            </div>
+
+            <!-- URL编码/解码 -->
+            <div class="tab-content active" id="url-content">
+                <div class="form-group">
+                    <label>输入文本</label>
+                    <textarea id="url-input" placeholder="输入需要编码或解码的文本"></textarea>
+                </div>
+                <div class="button-group">
+                    <button class="button" id="url-encode-btn">
+                        <i class="fas fa-lock"></i>
+                        URL编码
+                    </button>
+                    <button class="button secondary" id="url-decode-btn">
+                        <i class="fas fa-unlock"></i>
+                        URL解码
+                    </button>
+                </div>
+                <div class="result-container">
+                    <div class="result-title">结果</div>
+                    <div id="url-result"></div>
+                    <button class="copy-button" data-result="url-result">
+                        <i class="fas fa-copy"></i>
+                        复制结果
+                    </button>
+                </div>
+            </div>
+
+            <!-- Base64编码/解码 -->
+            <div class="tab-content" id="base64-content">
+                <div class="form-group">
+                    <label>输入类型</label>
+                    <select id="base64-type">
+                        <option value="text" selected>文本</option>
+                        <option value="file">文件</option>
+                    </select>
+                </div>
+                <div class="form-group" id="base64-text-input-group">
+                    <label>输入文本</label>
+                    <textarea id="base64-text-input" placeholder="输入需要编码或解码的文本"></textarea>
+                </div>
+                <div class="form-group" id="base64-file-input-group" style="display: none;">
+                    <label>选择文件</label>
+                    <input type="file" id="base64-file-input">
+                </div>
+                <div class="button-group">
+                    <button class="button" id="base64-encode-btn">
+                        <i class="fas fa-lock"></i>
+                        Base64编码
+                    </button>
+                    <button class="button secondary" id="base64-decode-btn">
+                        <i class="fas fa-unlock"></i>
+                        Base64解码
+                    </button>
+                </div>
+                <div class="result-container">
+                    <div class="result-title">结果</div>
+                    <div id="base64-result"></div>
+                    <button class="copy-button" data-result="base64-result">
+                        <i class="fas fa-copy"></i>
+                        复制结果
+                    </button>
+                </div>
+            </div>
+
+            <!-- JSON格式化 -->
+            <div class="tab-content" id="json-content">
+                <div class="form-group">
+                    <label>输入JSON</label>
+                    <textarea id="json-input" placeholder="输入需要格式化的JSON"></textarea>
+                </div>
+                <div class="button-group">
+                    <button class="button" id="json-format-btn">
+                        <i class="fas fa-indent"></i>
+                        格式化JSON
+                    </button>
+                    <button class="button secondary" id="json-minify-btn">
+                        <i class="fas fa-compress"></i>
+                        压缩JSON
+                    </button>
+                </div>
+                <div class="result-container">
+                    <div class="result-title">格式化结果</div>
+                    <pre id="json-result"></pre>
+                    <button class="copy-button" data-result="json-result">
+                        <i class="fas fa-copy"></i>
+                        复制结果
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/encoding.js"></script>
+</body>
+</html>

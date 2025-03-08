@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置 - WorkSmart</title>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>WorkSmart</h2>
+            </div>
+            <div class="sidebar-menu">
+                <a href="index.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="tools/time.html" class="menu-item">
+                    <i class="fas fa-clock"></i>
+                    <span>时间工具</span>
+                </a>
+                <a href="tools/encoding.html" class="menu-item">
+                    <i class="fas fa-code"></i>
+                    <span>编码工具</span>
+                </a>
+                <a href="options.html" class="menu-item active">
+                    <i class="fas fa-cog"></i>
+                    <span>设置</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>设置</h2>
+
+            <div class="options-section">
+                <h3>常规设置</h3>
+
+                <div class="form-group">
+                    <label>主题</label>
+                    <select id="theme-select">
+                        <option value="light" selected>浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="system">跟随系统</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>默认时区</label>
+                    <select id="default-timezone">
+                        <option value="UTC">UTC</option>
+                        <option value="Asia/Shanghai" selected>Asia/Shanghai (GMT+8)</option>
+                        <option value="America/New_York">America/New_York (GMT-5)</option>
+                        <option value="Europe/London">Europe/London (GMT+0)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>日期格式</label>
+                    <select id="date-format">
+                        <option value="YYYY-MM-DD HH:MM:SS" selected>YYYY-MM-DD HH:MM:SS</option>
+                        <option value="MM/DD/YYYY HH:MM:SS">MM/DD/YYYY HH:MM:SS</option>
+                        <option value="DD/MM/YYYY HH:MM:SS">DD/MM/YYYY HH:MM:SS</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="options-section">
+                <h3>数据管理</h3>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="save-history" checked>
+                        保存使用历史
+                    </label>
+                    <p class="help-text">保存您最近使用的工具和输入，以便快速访问</p>
+                </div>
+
+                <div class="form-group">
+                    <button class="button secondary" id="clear-history-btn">
+                        <i class="fas fa-trash"></i>
+                        清除历史记录
+                    </button>
+                </div>
+            </div>
+
+            <div class="options-section">
+                <h3>关于</h3>
+
+                <div class="about-info">
+                    <p><strong>WorkSmart</strong> 版本 1.0.0</p>
+                    <p>提高工作效率的多功能工具集</p>
+                    <p>© 2025 WorkSmart by KD</p>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button class="button" id="save-options-btn">
+                    <i class="fas fa-save"></i>
+                    保存设置
+                </button>
+                <button class="button secondary" id="reset-options-btn">
+                    <i class="fas fa-undo"></i>
+                    重置为默认
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/options.js"></script>
+</body>
+</html>

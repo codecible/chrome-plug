@@ -1,0 +1,17 @@
+/* 时间工具特定样式 */
+#timestamp-result,
+#date-result {
+    display: none;
+}
+
+#timestamp-result.show,
+#date-result.show {
+    display: block;
+}
+
+#timestamp-result-utc,
+#timestamp-result-local,
+#date-result-timestamp {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
