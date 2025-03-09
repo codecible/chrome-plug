@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlInput = document.getElementById('url-input');
     const urlEncodeBtn = document.getElementById('url-encode-btn');
     const urlDecodeBtn = document.getElementById('url-decode-btn');
+    const sqlDecodeBtn = document.getElementById('sql-decode-btn');
     const urlResult = document.getElementById('url-result');
 
     urlEncodeBtn.addEventListener('click', function() {
@@ -46,6 +47,18 @@ document.addEventListener('DOMContentLoaded', function() {
             urlResult.textContent = decodeURIComponent(urlInput.value);
         } catch (error) {
             alert('URL解码失败: ' + error.message);
+        }
+    });
+
+    // SQL解码功能 - 将URL解码后的文本中的 + 替换为空格
+    sqlDecodeBtn.addEventListener('click', function() {
+        try {
+            // 先进行URL解码
+            const urlDecoded = decodeURIComponent(urlInput.value);
+            // 然后将 + 替换为空格
+            urlResult.textContent = urlDecoded.replace(/\+/g, ' ');
+        } catch (error) {
+            alert('SQL解码失败: ' + error.message);
         }
     });
 

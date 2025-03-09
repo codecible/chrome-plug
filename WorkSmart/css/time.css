@@ -15,3 +15,43 @@
     margin-bottom: 5px;
     font-size: 16px;
 }
+
+/* 当前北京时间样式 */
+.current-time-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.current-time-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.current-time-row:last-child {
+    margin-bottom: 0;
+}
+
+.current-time-label {
+    font-weight: 600;
+    width: 100px;
+    margin-right: 10px;
+}
+
+#current-beijing-time,
+#current-timestamp {
+    flex-grow: 1;
+    font-family: monospace;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.current-time-row .copy-button {
+    margin-left: 10px;
+}

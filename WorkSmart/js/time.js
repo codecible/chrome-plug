@@ -12,12 +12,62 @@ document.addEventListener('DOMContentLoaded', function() {
     const dateResultTimestamp = document.getElementById('date-result-timestamp');
     const dateResult = document.getElementById('date-result');
 
+    // 获取当前北京时间元素
+    const currentBeijingTimeElement = document.getElementById('current-beijing-time');
+    const currentTimestampElement = document.getElementById('current-timestamp');
+
     const copyButtons = document.querySelectorAll('.copy-button');
 
     // 设置当前时间作为默认值
     const now = new Date();
     timestampInput.value = Math.floor(now.getTime() / 1000);
     dateInput.value = formatDate(now);
+
+    // 更新当前北京时间和时间戳
+    function updateCurrentBeijingTime() {
+        // 获取当前时间
+        const now = new Date();
+
+        // 获取当前时间戳（秒）
+        const timestamp = Math.floor(now.getTime() / 1000);
+
+        // 计算北京时间（UTC+8）
+        // 使用Intl.DateTimeFormat来格式化特定时区的时间
+        const beijingTimeFormatter = new Intl.DateTimeFormat('zh-CN', {
+            timeZone: 'Asia/Shanghai',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+
+        // 获取格式化后的北京时间部分
+        const beijingTimeParts = beijingTimeFormatter.formatToParts(now);
+
+        // 从格式化的部分中提取年、月、日、时、分、秒
+        const beijingTimeObj = {};
+        beijingTimeParts.forEach(part => {
+            if (part.type !== 'literal') {
+                beijingTimeObj[part.type] = part.value;
+            }
+        });
+
+        // 构建北京时间字符串
+        const beijingTimeStr = `${beijingTimeObj.year}-${beijingTimeObj.month}-${beijingTimeObj.day} ${beijingTimeObj.hour}:${beijingTimeObj.minute}:${beijingTimeObj.second}`;
+
+        // 更新显示
+        currentBeijingTimeElement.textContent = beijingTimeStr;
+        currentTimestampElement.textContent = timestamp;
+    }
+
+    // 初始更新当前北京时间
+    updateCurrentBeijingTime();
+
+    // 每秒更新一次当前北京时间
+    setInterval(updateCurrentBeijingTime, 1000);
 
     // 时间戳转日期
     timestampToDateBtn.addEventListener('click', function() {

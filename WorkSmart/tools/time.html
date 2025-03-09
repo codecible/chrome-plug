@@ -42,6 +42,27 @@
             </div>
 
             <div class="tab-content active" id="timestamp-content">
+                <!-- 添加当前北京时间和时间戳显示区域 -->
+                <div class="current-time-container">
+                    <div class="result-title">当前北京时间</div>
+                    <div class="current-time-row">
+                        <div class="current-time-label">格式化时间:</div>
+                        <div id="current-beijing-time"></div>
+                        <button class="copy-button" data-result="current-beijing-time">
+                            <i class="fas fa-copy"></i>
+                            复制
+                        </button>
+                    </div>
+                    <div class="current-time-row">
+                        <div class="current-time-label">时间戳:</div>
+                        <div id="current-timestamp"></div>
+                        <button class="copy-button" data-result="current-timestamp">
+                            <i class="fas fa-copy"></i>
+                            复制
+                        </button>
+                    </div>
+                </div>
+
                 <div class="two-columns">
                     <div>
                         <div class="form-group">
