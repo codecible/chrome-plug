@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>书签清除工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">书签管理</h1>
+            <p class="subtitle">安全清理浏览器书签</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="warning-section">
+                <div class="warning-icon">⚠️</div>
+                <p class="warning-text">
+                    导入或清除操作将永久修改书签数据，无法撤销。请谨慎操作！
+                </p>
+            </div>
+            
+            <!-- 导入书签功能区域 -->
+            <div class="import-section">
+                <button id="importBookmarks" class="import-button">
+                    <span class="button-icon">📥</span>
+                    导入书签文件
+                </button>
+                <input type="file" id="fileInput" accept=".html" style="display: none;">
+                
+                <div id="importPreview" class="import-preview" style="display: none;">
+                    <h3>📋 文件预览</h3>
+                    <div id="previewContent"></div>
+                    <div class="import-actions">
+                        <button id="confirmImport" class="danger-button">确认导入</button>
+                        <button id="cancelImport" class="cancel-button">取消</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 清除书签功能区域 -->
+            <div class="clear-section">
+                <button id="clearBookmarks" class="danger-button">
+                    <span class="button-icon">🗑️</span>
+                    清除所有书签
+                </button>
+            </div>
+            
+            <div id="status" class="status-message"></div>
+            
+            <div class="info-section">
+                <p class="info-text">
+                    <strong>功能说明：</strong><br>
+                    • <strong>导入</strong>: 从HTML文件导入书签<br>
+                    • <strong>清除</strong>: 删除浏览器中所有书签<br>
+                    • 操作前请确认已备份重要书签<br>
+                    • 导入操作将先清空现有书签
+                </p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
