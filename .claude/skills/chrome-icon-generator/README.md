@@ -35,7 +35,7 @@
 在 Claude Code 中直接调用技能：
 
 ```
-使用 icon-generator 技能，将 logo.png 转换为 Chrome 扩展图标
+使用 chrome-icon-generator 技能，将 logo.png 转换为 Chrome 扩展图标
 ```
 
 ### 方式 2：命令行直接调用
@@ -43,19 +43,19 @@
 #### 转换单个文件（默认输出到 ./icons/）
 
 ```bash
-python .claude/skills/icon-generator/icon_converter.py logo.png
+python .claude/skills/chrome-icon-generator/icon_converter.py logo.png
 ```
 
 #### 指定输出目录
 
 ```bash
-python .claude/skills/icon-generator/icon_converter.py logo.png -o ./output
+python .claude/skills/chrome-icon-generator/icon_converter.py logo.png -o ./output
 ```
 
 #### 自定义文件名前缀
 
 ```bash
-python .claude/skills/icon-generator/icon_converter.py logo.png --prefix myapp
+python .claude/skills/chrome-icon-generator/icon_converter.py logo.png --prefix myapp
 ```
 
 输出文件将为：`myapp16.png`, `myapp32.png`, `myapp48.png`, `myapp128.png`
@@ -63,13 +63,13 @@ python .claude/skills/icon-generator/icon_converter.py logo.png --prefix myapp
 #### 批量处理目录中的所有 PNG
 
 ```bash
-python .claude/skills/icon-generator/icon_converter.py ./images/ -o ./all_icons
+python .claude/skills/chrome-icon-generator/icon_converter.py ./images/ -o ./all_icons
 ```
 
 ### 方式 3：通过 handler.py（MCP 工具方式）
 
 ```bash
-echo '{"tool":"generate_icons","args":{"input_path":"logo.png"}}' | python .claude/skills/icon-generator/handler.py
+echo '{"tool":"generate_icons","args":{"input_path":"logo.png"}}' | python .claude/skills/chrome-icon-generator/handler.py
 ```
 
 ## 输出示例
@@ -160,7 +160,7 @@ icons/
 ### 安装依赖
 
 ```bash
-pip install -r .claude/skills/icon-generator/requirements.txt
+pip install -r .claude/skills/chrome-icon-generator/requirements.txt
 ```
 
 或直接安装：
@@ -225,7 +225,7 @@ top = (height - size) // 2
 ## 项目结构
 
 ```
-.claude/skills/icon-generator/
+.claude/skills/chrome-icon-generator/
 ├── skill.json          # 技能配置文件
 ├── handler.py          # MCP 工具处理器
 ├── icon_converter.py   # 核心转换脚本

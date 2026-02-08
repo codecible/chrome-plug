@@ -1,5 +1,5 @@
 ---
-name: icon-generator
+name: chrome-icon-generator
 description: Convert a PNG image into standard Chrome Extension icon sizes (16, 48, 128px). Use when the user asks to generate, update, or convert icons for a Chrome extension.
 ---
 
