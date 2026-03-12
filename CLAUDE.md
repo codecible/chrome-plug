@@ -10,5 +10,4 @@
 
 6. 在生成新的 Skill 时，通过skill: skill-creator 来创建一个新的 Skill。
 
-
-7. 当我要求提交代码（如 git commit）时，必须使用名为 `git-commit` 的 Skill，遵循 Conventional Commits 规范及要求来组织信息，绝对不要使用普通的标准 Bash 直接提交。
+7. 当我要求提交代码（如 git commit）时，优先使用名为 `git-commit` 的 Skill，遵循 Conventional Commits 规范及要求来组织信息，绝对不要使用普通的标准 Bash 直接提交。
