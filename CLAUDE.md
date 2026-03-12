@@ -8,4 +8,7 @@
 
 5. “每次我纠正你之后，就在 CLAUDE.md 文件中添加一条新规则，这样就不会再发生这种情况了。”
 
-6. 在生成新的 Skill 时，通过skill: skill-creator 来创建一个新的 Skill。/
+6. 在生成新的 Skill 时，通过skill: skill-creator 来创建一个新的 Skill。
+
+
+7. 当我要求提交代码（如 git commit）时，必须使用名为 `git-commit` 的 Skill，遵循 Conventional Commits 规范及要求来组织信息，绝对不要使用普通的标准 Bash 直接提交。
