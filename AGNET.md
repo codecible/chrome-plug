@@ -8,4 +8,4 @@
 
 5. “每次我纠正你之后，就在 CLAUDE.md 文件中添加一条新规则，这样就不会再发生这种情况了。”
 
-6. 在生成新的 Skill 时，要创建的是 skill.md。避免创建 skill.json 格式的文件。
+6. 在生成新的 Skill 时，通过skill: skill-creator 来创建一个新的 Skill。/
